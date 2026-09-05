@@ -884,7 +884,7 @@ let answers = [];
 let quizStartTime = null;
 let lastResult = null;
 const attemptsLeft = zones.map(()=> 2); // "ทดสอบใหม่ได้อีก 2 ครั้ง"
-const PASS_SCORE = 3; // out of 5
+const PASS_SCORE = 5; // out of 5
 
 function resetPlayerState(){
   state = zones.map((z,i)=> i===0 ? "current" : "locked");
