@@ -126,7 +126,7 @@
   .greeting{
     font-size:13px;
     color:var(--ink-soft);
-    margin-bottom:2px;
+    margin-bottom:14px;
   }
   .greeting .logout-link{
     color:var(--ink-soft);
@@ -507,6 +507,14 @@
 
 <div id="loginScreen">
   <div class="login-card">
+    <!-- ส่วนที่เพิ่มใหม่: โลโก้ และ ชื่อศูนย์ -->
+    <div style="margin-bottom: 16px;">
+      <img src="https://i.postimg.cc/VL6wMvrJ/1.png" alt="โลโก้" style="height: 75px; width: auto; margin-bottom: 8px;">
+      <div style="font-size: 15px; font-weight: 600; color: var(--ink); line-height: 1.4;">
+        ศูนย์ส่งเสริมการเรียนรู้ระดับอำเภอเทิง
+      </div>
+    </div>
+
     <div class="eyebrow-line"></div>
     <h1>เข้าสู่เส้นทาง</h1>
     <p class="sub">ลงชื่อเข้าใช้เพื่อเริ่มเดินทางและสะสมแต้มจากการผ่านแต่ละด่าน</p>
@@ -524,6 +532,10 @@
       </p>
       <div class="login-error" id="loginError">กรุณากรอกชื่อผู้เดินทางและรหัสผ่าน</div>
       <button type="submit" class="btn">เข้าสู่ระบบ</button>
+                     <!-- ส่วนที่เพิ่มใหม่: ข้อความเครดิตด้านล่างปุ่ม -->
+      <div style="margin-top: 18px; font-size: 12.5px; color: var(--ink-soft); line-height: 1.5; text-align: center;">
+        สร้างสรรค์โดย นายวนศาสตร์ วัฒนาสกุลลี<br>ครู สกร.ระดับอำเภอเทิง
+      </div>
     </form>
   </div>
 </div>
@@ -577,7 +589,12 @@
   <div id="nodesLayer"></div>
 </div>
 
-<footer>เดินทางให้ครบทั้งหกดินแดนเพื่อไปให้ถึงเทวสถานศักดิ์สิทธิ์</footer>
+<footer>
+<div>ศูนย์ส่งเสริมการเรียนรู้ระดับอำเภอเทิง</div>
+  <div style="margin-top: 6px; font-weight: 500;">
+    สร้างสรรค์โดย นายวนศาสตร์ วัฒนาสกุลลี ครู สกร.ระดับอำเภอเทิง
+  </div>
+</footer>
 
 </div><!-- /#appContent -->
 
@@ -884,7 +901,7 @@ let answers = [];
 let quizStartTime = null;
 let lastResult = null;
 const attemptsLeft = zones.map(()=> 2); // "ทดสอบใหม่ได้อีก 2 ครั้ง"
-const PASS_SCORE = 5; // out of 5
+const PASS_SCORE = 3; // out of 5
 
 function resetPlayerState(){
   state = zones.map((z,i)=> i===0 ? "current" : "locked");
